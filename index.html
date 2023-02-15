@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js verification code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@700&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .background{
+            background: rgba(0, 0, 0, 0.7) url(images/Desktop\ -\ 8.jpg);
+    background-size: cover;
+        width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    } 
+
+    .head-box{
+        width: 90%;
+    display: flex;
+    height: 100%;
+    margin: 0 0 0 12em;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .navbar{
+        display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding: 26px 0 0 12rem;
+
+    }
+
+    .navbar .logo{
+
+        display: flex;
+
+        align-items: center;
+        width: 452px;
+     height: 19px;
+
+    }
+    .navbar .logo h1{
+        color: white;
+font-family: 'Montserrat';
+font-size: 20px;
+border-bottom: 4px solid crimson;
+    padding: 0 0 5px 0;
+    }
+    .navbar .navlist{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        gap: 0px;
+
+       width: 452px;
+     height: 19px;
+  
+    }
+
+    .navlist li{
+        list-style: none;
+        width: 95px;
+        height: 19px;
+
+
+
+    }
+
+    .navlist li a{
+        text-decoration: none;
+        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+
+/* Inside auto layout */
+
+flex: none;
+order: 4;
+flex-grow: 0;
+}
+
+
+    .heading{
+    width: 672px;
+height: 192px;
+left: 203px;
+top: 154px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 96px;
+
+color: #FFFFFF;
+    }
+
+   
+
+
+    .headline {
+width: 592px;
+height: 161px;
+left: 203px;
+top: 366px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+/* or 26px */
+
+
+color: #FFFFFF;
+
+    }
+    .headline a{
+        color: #ccc;
+
+    }
+
+
+    /* section one  */
+
+    .section1{
+        background-color: #111111;
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .section1 .web-rel-box{
+        width: 90%;
+        min-height: 400px;
+        margin:0 0 0 6em;
+    }
+    .web-rel-box .t-heading{
+        display: flex;
+        margin: 50px 0 0 0;
+    }
+
+
+
+
+    .design-box{
+        width: 88px;
+    height: 172px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .design-box .d-b1{
+        width: 50px;
+    height: 50px;
+    /* left: 204px; */
+    /* top: 760px; */
+    background: #8B002A;
+    position: relative;
+    z-index: 1;
+    }
+    .design-box .d-b2{
+        width: 50px;
+    height: 50px;
+    /* left: 204px; */
+    /* top: 760px; */
+    background: #E20044;
+    position: relative;
+    bottom: 64px;
+    left: 15px;
+    }
+
+    /* topic heading design */
+
+    .t-heading .th-design{
+
+    }
+
+    .web-rel-box .t-heading .th-design h1 {
+        width: 100%;
+        height: 53px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 38px;
+line-height: 140%;
+/* or 53px */
+color: #FFFFFF;
+margin: 0 0 0 29px;
+    }
+
+    .web-rel-box .t-heading .th-design p {
+        width: 419px;
+        height: 28px;
+        color: #FFFFFF;
+       font-family: 'Montserrat';
+       font-style: normal;
+        font-weight: 500;
+       font-size: 20px;
+       line-height: 140%;
+    }
+
+    /* box section */
+    .topic-sec{
+        display: flex;
+        justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    }
+    .topic-sec .box{
+        width: 333px;
+        height: 232px;
+        background: #000000;
+        padding: 24px;
+        margin: 0 10px 20px 10px;
+        transition: all 0.3s ease-in;
+        border-radius: 5px;
+    }
+    
+    .topic-sec .box:hover{
+        background-color: crimson;
+        transform: scale(1.07);
+    }
+
+    /* imported icon */
+    .topic-sec .box .icon{
+width: 45.22px;
+height: 55.22px;
+/* margin: 24.12px 0 0 0; */
+color: #E20044;
+transition: all 0.3s ease-in;
+
+
+    }
+
+    .topic-sec .box:hover .icon{
+        color: white;
+     }
+
+    /* box topic heading  */
+
+    .box .bt-heading{
+width: 217px;
+height: 66.22px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 140%;
+/* or 28px */
+
+
+color: #FFFFFF;
+    }
+
+    /* <!-- box topic paragraph --> */
+
+    .box .bt-paragraph{
+width: 284.38px;
+height: 52.25px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 140%;
+/* or 15px */
+color: #FFFFFF;
+
+    }
+
+
+    /* section 2 */
+    .section2{
+        width: 100%;
+    min-height: 300px;
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    }
+
+    /* blog box */
+
+    .section2 .blog-sec{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* blog */
+
+    .section2 .blog-sec .blog{
+        width: 500px;
+        height: 350px;
+        background-color: #222;
+        margin: 10px;
+    }
+
+
+
+    /* section3 */
+
+    .section3{
+        width: 100%;
+
+        height: 574px;
+
+        background-color:#000000;
+    }
+
+
+    /* background image */
+
+    .section3 > div{
+        width: 100%;
+
+        height: 574px;
+
+        background: url(images/image\ 9.jpg);
+
+        display: flex;
+
+        flex-direction:column;
+
+
+        padding: 30px 0 0 0px;
+
+        align-items: center;
+        
+
+    }
+
+    .section3 > div .mid-h{
+        display: flex;
+
+        justify-content: center;
+
+        color: #E20044;
+
+        font-weight: 600; 
+
+        font-size: 16px;
+
+        width: 100%;
+
+        height: 22px;
+
+        font-family: "Montserrat";
+
+
+    }
+    .section3 > div .heading{
+        display: flex;
+
+        justify-content: center;
+
+        width: 100%;
+
+
+        height: 53px;
+ 
+        font-family: 'Montserrat';
+
+        font-weight: 600;
+
+        font-size: 38px;
+
+        align-items: center;
+        
+    }
+
+    /* staff card div */
+
+    .section3 > div > .staff-div{
+        display: flex;
+        width: 90%;
+        height: 352.41px;
+        align-items: center;
+        gap: 40px;
+        margin:  30px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+
+    /* staff card */
+    .section3 > div > .staff-div .card{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 12px;
+
+    width: 274px;
+    height: 352.41px;
+
+    background: rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(1.5px);
+
+
+    border-radius: 12px;
+
+/* Inside auto layout */
+
+     flex: none;
+     order: 0;
+     flex-grow: 0;
+    }
+
+
+    /* card image */
+    .section3 > div > .staff-div .card >img{
+        width: 100px;
+        height: 100px;
+        background:#D9D9D9;
+        border-radius: 12px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    /* card name */
+
+    .section3 > div > .staff-div .card >h1{
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: "Montserrat";
+        font-size: 24px;
+        line-height: 140%;
+        font-style: normal;
+    }
+
+    .section3 > div> .staff-div .card >p{
+        width: 226px;
+        height: 104px;
+        font-family: "Montserrat";
+        font-size: 12px;
+        line-height: 140%;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: center;
+
+        flex: none;
+order: 2;
+flex-grow: 0;
+    }
+
+
+
+
+    @media screen and (max-width:1200px) {
+        .head-box{
+            margin: 0 0 0 5em;
+        }
+    }
+
+    @media screen and (max-width:950px) {
+        .web-rel-box .t-heading .th-design h1{
+            font-size: 35px;
+        }
+        .navbar {
+
+    padding: 26px 0 0 6rem;
+        
+    }
+    }
+    @media screen and (max-width:870px) {
+
+        .section1 .web-rel-box {
+            margin: 0;
+        }
+
+        .navbar {
+
+padding: 26px 0 0 4rem;
+    
+}
+    }
+
+
+
+    @media screen and (max-width:770px) {
+
+        .head-box {
+    margin: 0 0 0 20px;
+}
+
+
+        .navbar {
+
+padding: 26px 20px 0 20px;
+height: 130px;
+flex-wrap: wrap;
+justify-content: center;
+width: 100%;
+}
+
+
+.navbar .logo {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+.navbar .navlist {
+
+    width: 100%;
+    height: 60px;
+
+    }
+.navlist li a {
+    font-size: 21px;
+}
+}
+
+
+@media screen and (max-width:670px) {
+    .heading {
+    width: 100%;  
+    height: auto;
+    font-size: 50px;
+    line-height: 70px;
+}
+
+.headline {
+    width: 90%;
+}
+}
+
+@media screen and (max-width:570px) {
+
+     .heading {
+
+    font-size: 40px;
+    line-height: 50px;
+}
+.web-rel-box .t-heading .th-design h1 {
+width: 88%;
+    font-size: 25px;
+    height: auto;
+    margin: 0 0 20px 0;
+}
+
+.design-box  {
+    display: none;
+}
+}
+</style>
+<body>
+    <div class="background">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>HR Componey</h1>
+            </div>
+            <ul class="navlist">
+                <li><a href="">Team</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog </a></li>
+                <li><a href="">services</a></li>
+            </ul>
+        </nav>
+       <div class="head-box">
+       
+        <h1 class="heading">Digital World
+            Networking Agency
+        </h1>
+        <p class="headline">
+            this page is for technology information created by <a href="https://muhammadhamd.github.io/multiple-webpage-smit/" target="_blank">Muhammad Hamd</a>.So hope you guys enjoy
+        </p>
+       </div>
+    </div>
+    <!-- section one -->
+    <div class="section1">
+        <!-- web releted information box -->
+        <div class="web-rel-box">
+            <!-- topic heading -->
+            <div class="t-heading">
+
+                <!-- box design -->
+                <div class="design-box">
+                    <!-- design box 1 -->
+                    <div class="d-b1"></div>
+                     <!-- design box 2 -->
+                    <div class="d-b2"></div>
+                </div>
+
+                <!-- topic heading design -->
+                <div class="th-design">
+                    <p>how can this web helpful to you</p>
+                <h1>Topics which releted to this Website</h1>
+                </div>
+            </div>
+
+            <!-- topic section devided into boxes-->
+            <div class="topic-sec">
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+                <div class="box">  
+                    <!-- icon imported -->
+                    <iconify-icon icon="icons8:idea" class="icon" width="45" height="45"></iconify-icon>
+                    <!-- box topic heading -->
+                    <p class="bt-heading">
+                        Creative Marketing &
+                        Advertsing
+                    </p>
+                    <!-- box topic paragraph -->
+                    <p class="bt-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section2 -->
+    <div class="section2">
+        <!-- blog sec -->
+        <div class="blog-sec">
+
+            <!-- blogs -->
+            <div class="blog"></div>
+            <div class="blog"></div>
+            <div class="blog"></div>
+            <div class="blog"></div>
+        </div>
+    </div>
+
+    <!-- section3 -->
+
+    <div class="section3">
+
+        <!-- background image -->
+     <div>
+            <!-- mid-heading -->
+
+            <div class="mid-h">
+                Team Members
+            </div>
+            <!-- heading -->
+
+            <div class="heading">
+                Our Team
+            </div>
+        <!-- staff card div -->
+
+        <div class="staff-div">
+
+
+
+            <div class="card">
+                <img src="" alt="">
+                <h1>Hamd</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fringilla at gravida justo, felis risus ullamcorper augue tempus. Nam hac.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h1>Hamd</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fringilla at gravida justo, felis risus ullamcorper augue tempus. Nam hac.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h1>Hamd</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fringilla at gravida justo, felis risus ullamcorper augue tempus. Nam hac.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h1>Hamd</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fringilla at gravida justo, felis risus ullamcorper augue tempus. Nam hac.</p>
+            </div>
+            
+        </div>
+     </div>
+    </div>
+    <script>
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+</html>
